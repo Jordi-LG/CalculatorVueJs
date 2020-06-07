@@ -18,7 +18,27 @@
   </head>
   <body>
 
+    <section id="app" class="container mt-5">
 
+      <div class="row text-center">
+        <div class="col-9 p-5 border">
+          {{ total }}
+        </div>
+        <div class="col-3 p-5 border">
+          {{ operator }}
+        </div>
+        <div class="col-12 p-5 border">
+          <input type="number" v-model="current">
+        </div>
+      </div>
+      <div class="row text-center" v-for="lines in rowNumber">
+        <div class="col-3 p-5 border cell" v-for="button in lines" @click="select(button)">
+          {{ button }}
+        </div>
+      </div>
+
+
+    </section>
 
 
     <!-- Optional JavaScript -->
