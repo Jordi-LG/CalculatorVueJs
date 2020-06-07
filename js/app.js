@@ -57,7 +57,7 @@ let vm = new Vue ({
         // If operator '=' -> Calculate all numbers values
         } else {
           this.numToCalc.push(this.current)
-          this.current = ''
+          this.current = 0
           this.total = eval(this.numToCalc.join(''));
           this.numToCalc = [];
         }
